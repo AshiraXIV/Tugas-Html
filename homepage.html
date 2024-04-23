@@ -1,1 +1,128 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Personal Homepage</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            }
+                nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ffc107;
+        }
+
+        section {
+            padding: 40px;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        section p:last-child {
+            margin-bottom: 0;
+        }
+
+        section p::before {
+            content: '\2022'; 
+            color: #ffc107;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        section p:last-child::after {
+            content: ''; 
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+</style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Personal Homepage</h1>
+        <nav>
+            <ul>
+                <li><a href="homepage.html" >Home</a></li>
+                <li><a href="gallery.html" >Gallery</a></li>
+                <li><a href="blog.html" >Blog</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>About me</h2>
+        <p class="animated-text">Hi, I'm Aleeisandro Lasut</p>
+        <p class="animated-text">I am an informatics student</p>        
+    </section>
+    <footer>
+        <p>&copy; 2024 Aleeisandro Lasut</p>
+    </footer>
+    <script>
+        // Tampilkan pesan sambutan
+        alert("Selamat datang di blog saya!");
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedTexts = document.querySelectorAll('.animated-text');
+
+            animatedTexts.forEach((text, index) => {
+                const words = text.textContent.split(' ');
+                text.textContent = '';
+                
+                words.forEach((word, wordIndex) => {
+                    const span = document.createElement('span');
+                    span.textContent = word + (wordIndex !== words.length - 1 ? ' ' : '');
+                    span.style.opacity = '0';
+                    span.style.animation = `fadeIn 1s ${index * words.length + wordIndex + 1}s forwards`;
+
+                    text.appendChild(span);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
