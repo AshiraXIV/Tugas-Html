@@ -1,1 +1,135 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Personal Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #007bff;
+        }
+        a .article-title {
+            font-weight: bold;
+        }
+        a .article-link {
+            color: #777;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #007bff;
+        }
+        a .article-title {
+            font-weight: bold;
+        }
+        a .article-link {
+            color: #777;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="homepage.html" >Home</a></li>
+                <li><a href="gallery.html" >Gallery</a></li>
+                <li><a href="blog.html" >Blog</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Blog Posts</h2>
+        <ul>
+            <li><a href="https://www.bolasport.com/read/314049070/usai-jitu-memprediksi-kemenangan-timnas-indonesia-di-leg-i-media-asing-sebut-vietnam-bakal-gagal-menang-di-kandang-sendiri"><span class="article-title">Artikel tentang Timnas Indonesia</span><br><span class="article-link">www.bolasport.com</span></a></li>
+            <li><a href="https://www.cnnindonesia.com/teknologi/20240205191559-185-1058994/fakta-fakta-apple-vision-pro-simak-kecanggihannya"><span class="article-title">Article tentang Apple Vision Pro</span><br><span class="article-link">www.cnnindonesia.com</span></a></li>
+            <li><a href="https://www.cnnindonesia.com/hiburan/20240325132652-220-1078663/exhuma-jadi-film-kultus-pertama-tembus-10-juta-penonton-di-korea"><span class="article-title">Article tentang Film Exhuma</span><br><span class="article-link">www.cnnindonesia.com</span></a></li>
+        </ul>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Aleeisandro Lasut</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const articleLinks = document.querySelectorAll('.article-title');
+
+            articleLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+
+                    const articleURL = this.parentElement.href;
+                    window.open(articleURL, '_blank');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
